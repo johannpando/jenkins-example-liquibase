@@ -3,6 +3,10 @@ pipeline {
     docker { image 'liquibase/liquibase:4.4.2' }
   }
   stages {
+    stage('Initialize'){
+        def dockerHome = tool 'myDocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+    }
     stage('Test') {
       steps {
         sh 'liquibase --version'
