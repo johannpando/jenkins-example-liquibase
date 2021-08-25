@@ -5,12 +5,12 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        sh 'liquibase status --url="jdbc:h2:mem:testdb" --changeLogFile=my_app-wrapper.xml --username=sa --password=password'
+        sh 'liquibase status --url="jdbc:postgresql://localhost:5432/postgres" --changeLogFile=my_app-wrapper.xml --username=postgres --password=secure_pass_here'
       }
     }
     stage('Update') {
       steps {
-        sh 'liquibase update --url="jdbc:h2:mem:testdb" --changeLogFile=my_app-wrapper.xml --username=sa --password=password'
+        sh 'liquibase update --url="jdbc:postgresql://localhost:5432/postgres" --changeLogFile=my_app-wrapper.xml --username=postgres --password=secure_pass_here'
       }
     }
   }
