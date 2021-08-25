@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        sh 'liquibase status --url="jdbc:mysql://db:3306/testdb" --changeLogFile=my_app-wrapper.xml --username=$DB_USERNAME --password=$DB_PASSWORD'
+        sh 'liquibase status --url="jdbc:mysql://noexiste:3306/testdb" --changeLogFile=my_app-wrapper.xml --username=$DB_USERNAME --password=$DB_PASSWORD'
       }
     }
     stage('Update') {
