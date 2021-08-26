@@ -2,5 +2,4 @@
 
 --changeset jpandode:1
 --Database: postgresql
-ALTER TABLE test_table_sql
-ADD COLUMN new_column phone VARCHAR;
+ALTER TABLE test_table_sql ADD COLUMN zipcode VARCHAR;
