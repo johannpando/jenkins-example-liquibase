@@ -10,5 +10,5 @@
                         http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd 
                         http://www.liquibase.org/xml/ns/dbchangelog 
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
-  <include file="my_app-1.1.xml"/>
+  <include file="testdb.sql"/>
 </databaseChangeLog>
