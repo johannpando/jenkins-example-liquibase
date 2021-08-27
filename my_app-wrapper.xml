@@ -12,4 +12,5 @@
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
   <include file="testdb.sql"/>
   <include file="testdb-add-column.sql"/>
+  <include file="testdb-add-column_country.sql"/>
 </databaseChangeLog>
