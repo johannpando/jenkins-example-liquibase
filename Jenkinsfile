@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        sh 'liquibase status --url="jdbc:postgresql://host.docker.internal:5432/testbd-1" --changeLogFile=databaseChangeLog.xml --username=postgres --password=secure_pass_here'
+        sh 'liquibase status --url="jdbc:postgresql://host.docker.internal:5432/testdb-1" --changeLogFile=databaseChangeLog.xml --username=postgres --password=secure_pass_here'
       }
     }
     stage('Update') {
