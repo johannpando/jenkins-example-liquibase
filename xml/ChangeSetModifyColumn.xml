@@ -10,12 +10,11 @@
                         http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd 
                         http://www.liquibase.org/xml/ns/dbchangelog 
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
-    <changeSet author="Darin Pope" id="create-countries">
-        <createTable tableName="test_table">
-               <column name="test_id" type="int">
-               <constraints primaryKey="true"/>
-               </column>
-               <column name="test_column" type="varchar"/>
-        </createTable>
+    <changeSet author="Usuario2" id="addColumn-city-1">
+      <addColumn tableName="country">
+        <column name="country_code" type="VARCHAR(3)">
+          <constraints nullable="false"/>
+        </column>
+      </addColumn>
     </changeSet>
 </databaseChangeLog>
