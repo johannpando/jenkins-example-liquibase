@@ -1,0 +1,3 @@
+<changeSet id="referChangeSetForRollback" author="jpandode">
+    <rollback changeSetId="create-table" changeSetAuthor="JuanPerez"/>
+</changeSet>

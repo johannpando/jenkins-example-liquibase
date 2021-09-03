@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Rollback') {
       steps {
-        sh 'liquibase --url="jdbc:postgresql://host.docker.internal:5432/testdb-1" --username=postgres --password=secure_pass_here rollBackSQL v_1.0.0'
+        sh 'liquibase --url="jdbc:postgresql://host.docker.internal:5432/testdb-1" --changeLogFile=rollBackChangeLog.xml --username=postgres --password=secure_pass_here rollBackSQL v_1.0.0'
       }
     }
   }
