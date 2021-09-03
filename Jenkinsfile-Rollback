@@ -1,0 +1,17 @@
+pipeline {
+  agent {
+    docker { image 'liquibase/liquibase:4.4.2' }
+  }
+  stages {
+    stage('Status') {
+      steps {
+        sh 'liquibase status --url="jdbc:postgresql://host.docker.internal:5432/testdb-1" --changeLogFile=databaseChangeLog.xml --username=postgres --password=secure_pass_here'
+      }
+    }
+    stage('Rollback') {
+      steps {
+        sh 'liquibase --url="jdbc:postgresql://host.docker.internal:5432/testdb-1" --username=postgres --password=secure_pass_here rollBackSQL v_1.0.0'
+      }
+    }
+  }
+}

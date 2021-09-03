@@ -1,5 +1,5 @@
 --liquibase formatted sql
 
---changeset JuanPerez:2222
+--changeset JuanPerez:create-table
 --Database: testdb-1
---rollback firstChange
+--rollback v_1.0.0
