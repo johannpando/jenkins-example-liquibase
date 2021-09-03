@@ -4,8 +4,8 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
-    <changeSet id="version1" author="jpandode">
+    <changeSet id="rollback-1" author="jpandode">
         <dropTable tableName="country"/>
-        <rollback changeSetId="version1" changeSetAuthor="JuanPerez"/>
+        <rollback changeSetId="createTable" changeSetAuthor="JuanPerez"/>
     </changeSet>
 </databaseChangeLog>
