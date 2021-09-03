@@ -6,6 +6,6 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
     <changeSet id="rollback-1" author="jpandode">
         <dropTable tableName="country"/>
-        <rollback changeSetId="createTable" changeSetAuthor="JuanPerez"/>
+        <!--<rollback changeSetId="createTable" changeSetAuthor="JuanPerez"/>-->
     </changeSet>
 </databaseChangeLog>
