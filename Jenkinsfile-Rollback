@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Rollback') {
       steps {
-        sh 'cp postgresql-42.2.23.jar liquibase/liquibase:4.4.3/lib'
+        sh 'ls -la'
         sh 'liquibase rollback version1'
       }
     }
