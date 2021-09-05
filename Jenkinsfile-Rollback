@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Rollback') {
       steps {
-        sh 'liquibase rollback version1'
+        sh 'liquibase --changeLogFile=rollBackChangeLog.xml rollback version1'
       }
     }
   }
