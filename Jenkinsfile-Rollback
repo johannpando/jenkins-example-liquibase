@@ -5,8 +5,9 @@ pipeline {
   stages {
     stage('Rollback') {
       steps {
-        sh 'docker ps'
-        sh 'liquibase rollback version1'
+        sh '''
+          liquibase rollback version1
+        '''
       }
     }
   }
