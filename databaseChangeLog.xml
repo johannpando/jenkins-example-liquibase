@@ -10,5 +10,5 @@
                         http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd 
                         http://www.liquibase.org/xml/ns/dbchangelog 
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
-  <include file="sql/2.-testdb-add-columns.sql"/>
+  <include file="sql/1.-testdb-createTable.sql"/>
 </databaseChangeLog>
