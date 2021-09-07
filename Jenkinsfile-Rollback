@@ -6,7 +6,7 @@ pipeline {
     stage('Rollback') {
       steps {
         sh '''
-          liquibase rollback version1
+          liquibase --url="jdbc:postgresql://host.docker.internal:5432/testdb-1" --changeLogFile=databaseChangeLog.xml rollback version1
         '''
       }
     }
