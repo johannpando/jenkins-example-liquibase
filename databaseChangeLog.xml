@@ -7,5 +7,6 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
    
         <include file="sql/1.-testdb-createTable.sql" />
+        <include file="sql/2.-testdb-add-columns.sql" />
 
 </databaseChangeLog>
