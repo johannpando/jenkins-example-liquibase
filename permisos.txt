@@ -1,0 +1,2 @@
+docker exec -ti -u root jenkins bash
+chown jenkins /var/run/docker.sock
