@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Update Tags') {
       steps {
-        sh 'liquibase tag version1 --url=jdbc:postgresql://host.docker.internal:5432/testdb --username=postgres --password=postgres'
+        sh 'liquibase tag version2 --url=jdbc:postgresql://host.docker.internal:5432/testdb --username=postgres --password=postgres'
       }
     }
   }
