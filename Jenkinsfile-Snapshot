@@ -12,7 +12,7 @@ pipeline {
         steps {
             script {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                        sh "which git"
+                        sh "apk update && apk add git"
                         sh "git config user.email admin@example.com"
                         sh "git config user.name example"
                         sh "git checkout -b snapshot-bbdd-branch"
