@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Snaphot from Database') {
       steps {
-        sh 'java -version'
+        sh 'git status'
       }
     }
 
