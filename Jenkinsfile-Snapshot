@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Snaphot from Database') {
       steps {
-        sh '/usr/bin/git status'
+        sh 'git status'
       }
     }
 
