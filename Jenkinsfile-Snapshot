@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'liquibase/liquibase:4.4.3' }
+    docker { image 'liquibase/liquibase:4.4.3', image 'alpine/git' }
   }
   stages {
     stage('Snaphot from Database') {
