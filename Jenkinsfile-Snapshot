@@ -14,7 +14,7 @@ pipeline {
       sh """
           #!/bin/bash
           echo "git status"
-          git status
+          /urs/bin/git status
         """
     }
   }
