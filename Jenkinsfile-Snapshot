@@ -13,7 +13,7 @@ pipeline {
     always {
       sh """
           echo "git status"
-          ls /usr/bin/ | grep "git"
+          ifconfig
         """
     }
   }
