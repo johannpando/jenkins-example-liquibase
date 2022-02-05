@@ -2,16 +2,18 @@ pipeline {
   agent {
     docker { image 'liquibase/liquibase:4.4.3' }
   }
-  stages {
-    stage('Snaphot from Database') {
-      steps {
-        sh """
+  stage('Update GIT') {
+  steps {
+        script {
+          catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+            sh """
           #!/bin/bash
           echo "git status"
           /usr/bin/git status
         """
+          }
+        }
       }
     }
 
-  }
 }
