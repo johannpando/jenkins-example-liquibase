@@ -7,8 +7,8 @@ pipeline {
       steps {
         sh """
           #!/bin/bash
-          echo "jgit status"
-          jgit status
+          echo "git status"
+          git status
         """
       }
     }
