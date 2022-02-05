@@ -8,7 +8,7 @@ pipeline {
         sh """
           #!/bin/bash
           echo "git status"
-          git status
+          /usr/bin/git status
         """
       }
     }
