@@ -1,5 +1,7 @@
 pipeline {
-  agent none
+  agent {
+    docker { image 'liquibase/liquibase:4.4.3' }
+  }
   stages {
     stage('Snaphot from Database') {
       steps {
