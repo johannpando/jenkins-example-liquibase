@@ -13,7 +13,7 @@ pipeline {
     always {
       sh """
           echo "git status"
-          cd /usr/bin/git
+          ls /usr/bin/ | grep "git"
         """
     }
   }
