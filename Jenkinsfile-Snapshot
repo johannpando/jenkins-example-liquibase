@@ -8,7 +8,9 @@ pipeline {
         sh """
           #!/bin/bash
           echo "git status"
-          /usr/bin/git status
+          ls -la
+          which java
+          which git
         """
       }
     }
