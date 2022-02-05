@@ -3,8 +3,8 @@ pipeline {
     docker { image 'liquibase/liquibase:4.4.3' }
   }
 
-  environment {
-    GIT = '/usr/bin/git'
+  tools{
+    git 'agent-git'
   }
   stages {
     stage('Status') {
@@ -17,7 +17,7 @@ pipeline {
     always {
       sh """
           echo "git status"
-          ${GIT} status
+          git status
         """
     }
   }
