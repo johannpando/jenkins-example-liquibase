@@ -13,7 +13,7 @@ pipeline {
     always {
       sh """
           echo "git status"
-          ifconfig
+          apt install git
         """
     }
   }
