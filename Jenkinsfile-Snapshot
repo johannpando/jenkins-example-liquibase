@@ -2,6 +2,10 @@ pipeline {
   agent {
     docker { image 'liquibase/liquibase:4.4.3' }
   }
+
+  enviroment {
+    GIT = '/usr/bin/git'
+  }
   stages {
     stage('Status') {
       steps {
@@ -13,7 +17,7 @@ pipeline {
     always {
       sh """
           echo "git status"
-          sudo apt install git
+          ${GIT} status
         """
     }
   }
