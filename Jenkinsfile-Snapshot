@@ -12,7 +12,6 @@ pipeline {
   post {
     always {
       sh """
-          #!/bin/bash
           echo "git status"
           /usr/bin/git status
         """
