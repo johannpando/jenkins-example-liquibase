@@ -1,14 +1,12 @@
 pipeline {
-  agent {
-    docker { image 'liquibase/liquibase:4.4.3' }
-  }
+  agent none
   stages {
     stage('Snaphot from Database') {
       steps {
         sh """
           #!/bin/bash
           echo "git status"
-          git status
+          /usr/bin/git status
         """
       }
     }
