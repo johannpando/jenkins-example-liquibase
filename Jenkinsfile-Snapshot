@@ -13,7 +13,7 @@ pipeline {
     always {
       sh """
           echo "git status"
-          apt install git
+          sudo apt install git
         """
     }
   }
