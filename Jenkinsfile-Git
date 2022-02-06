@@ -1,7 +1,6 @@
 pipeline {
   agent {
     docker { image 'bitnami/git:latest' 
-      --args '-it --entrypoint=/bin/sh'
     }
   }
 
