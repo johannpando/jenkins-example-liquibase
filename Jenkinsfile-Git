@@ -1,0 +1,14 @@
+pipeline {
+  agent {
+    docker { image 'alpine/git:latest' }
+  }
+
+  stages {
+    stage('Git Status') {
+      steps {
+        sh 'git status'
+      }
+    }
+  }
+}
+
