@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'alpine/git:latest' }
+    docker { image 'alpine/git' }
   }
 
   stages {
