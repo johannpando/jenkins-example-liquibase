@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker { image 'alpine/git' 
-      args '-it --entrypoint=/bin/bash'
+      args '-it --entrypoint=/bin/sh'
     }
   }
 
