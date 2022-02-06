@@ -1,7 +1,7 @@
 pipeline {
   agent {
-    docker { image 'alpine/git' 
-      args '-it --entrypoint=/bin/sh alpine git'
+    docker { image 'bitnami/git:latest' 
+      --args '-it --entrypoint=/bin/sh'
     }
   }
 
