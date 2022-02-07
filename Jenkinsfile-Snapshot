@@ -20,6 +20,7 @@ pipeline {
         script {
           catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                   sh "git add ."
+                  sh "git commit -m 'add snaphot-bbdd.postgresql.sql'"
           }
         }
       }
