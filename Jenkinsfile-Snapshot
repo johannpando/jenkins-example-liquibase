@@ -6,7 +6,7 @@ pipeline {
         docker { image 'liquibase/liquibase:4.4.3' }
       }
       steps {
-        sh 'liquibase status --url="jdbc:postgresql://172.17.0.1:5432/testdb" --changeLogFile=databaseChangeLog.xml --username=postgres --password=postgres'
+        sh 'liquibase --url="jdbc:postgresql://172.17.0.1:5432/postgres" --changeLogFile=snaphot-bbdd.postgresql.sql --schemas=public,stealthis --includeSchema=true generateChangeLog --username=postgres --password=postgres'
       }
     }
     stage('Git Status') {
@@ -17,7 +17,19 @@ pipeline {
           }
       }
       steps {
-        sh 'git status'
+        script {
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                        sh "apk update && apk add git"
+                        sh "git config user.email admin@example.com"
+                        sh "git config user.name example"
+                        sh "git checkout -b snapshot-bbdd-branch"
+                        sh "git add snaphot-bbdd.sql"
+                        sh "git commit -m 'add snaphot-bbdd.sql"
+                        sh "git push https://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@github.com/johannpando/jenkins-example-liquibase.git -u origin snapshot-bbdd-branch"
+                    }
+                }
+            }
+        }
       }
     }
   }
