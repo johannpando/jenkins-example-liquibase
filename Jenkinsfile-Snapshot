@@ -15,8 +15,8 @@ pipeline {
     stage('Git Status') {
       agent {
         docker { 
+            image 'bitnami/git:latest'
             alwaysPull true
-            image 'bitnami/git:latest' 
           }
       }
       steps {
