@@ -19,11 +19,8 @@ pipeline {
       steps {
         script {
           catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                  sh "git config user.email admin@example.com"
-                  sh "git config user.name example"
-                  sh "git checkout -b snapshot-bbdd-branch"
-                  sh "git add snaphot-bbdd.sql"
-                  sh "git commit -m 'add snaphot-bbdd.sql"
+                  sh "git add snaphot-bbdd.postgresql.sql"
+                  sh "git commit -m 'add snaphot-bbdd.postgresql.sql"
                   sh "git push https://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@github.com/johannpando/jenkins-example-liquibase.git -u origin snapshot-bbdd-branch"
           }
         }
