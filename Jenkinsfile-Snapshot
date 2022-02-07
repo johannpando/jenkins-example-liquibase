@@ -1,13 +1,10 @@
 pipeline {
-  agent {
-    docker { image 'liquibase/liquibase:4.4.3' }
-  }
-
-  tools{
-    git 'Default'
-  }
+  agent none
   stages {
     stage('Status') {
+      agent {
+        docker { image 'liquibase/liquibase:4.4.3' }
+      }
       steps {
         sh 'liquibase status --url="jdbc:postgresql://172.17.0.1:5432/testdb" --changeLogFile=databaseChangeLog.xml --username=postgres --password=postgres'
       }
