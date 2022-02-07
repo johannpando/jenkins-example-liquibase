@@ -14,7 +14,10 @@ pipeline {
     }
     stage('Git Status') {
       agent {
-        docker { image 'bitnami/git:latest' }
+        docker { 
+            alwaysPull false
+            image 'bitnami/git:latest' 
+          }
       }
       steps {
         sh 'git status'
