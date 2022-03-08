@@ -1,14 +1,10 @@
 pipeline {
   agent any
 
-  environment {
-    LIQUIBASE_HOME = 'C://Tools//liquibase-4.8.0'
-  }
-
   stages {
     stage('Status') {
       steps {
-        sh """${LIQUIBASE_HOME}/liquibase status"""
+        sh """C://Tools//liquibase-4.8.0//liquibase status"""
       }
     }
   }
