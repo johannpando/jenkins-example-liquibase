@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        sh 'C://Tools//liquibase-4.8.0//liquibase status'
+        sh 'liquibase status'
       }
     }
   }
