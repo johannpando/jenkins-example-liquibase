@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    LIQUIBASE_HOME = 'C:\Tools\liquibase-4.8.0'
+    LIQUIBASE_HOME = 'C://Tools//liquibase-4.8.0'
   }
 
   stages {
