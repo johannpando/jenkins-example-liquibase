@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        sh """$LIQUIBASE_HOME\\liquibase status"""
+        sh """$LIQUIBASE_HOME/liquibase status"""
       }
     }
   }
