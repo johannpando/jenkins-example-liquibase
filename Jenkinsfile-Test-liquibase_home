@@ -8,7 +8,7 @@ pipeline {
     stage('Status') {
       steps {
         dir('C:\\Tools\\liquibase-4.8.0') {
-          bat "${LIQUIBASE_HOME}//liquibase status --url=\"${URL}\""
+          bat "${LIQUIBASE_HOME}//liquibase status --url=\"${LIQ_URL}\""
         }
       }
     }
