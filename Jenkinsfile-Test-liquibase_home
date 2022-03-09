@@ -1,10 +1,12 @@
 pipeline {
   agent any
-
+  environment {
+    LIQUIBASE_HOME = tool name: 'Liquibase', type: 'org.jenkinsci.plugins.liquibase.install.LiquibaseInstallation'
+  }
   stages {
     stage('Status') {
       steps {
-        sh 'liquibase status'
+        bat "${LIQUIBASE_HOME} liquibase status"
       }
     }
   }
