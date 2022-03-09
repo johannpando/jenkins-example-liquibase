@@ -9,5 +9,8 @@ pipeline {
       steps {
         dir('C:\\Tools\\liquibase-4.8.0') {
           bat "${LIQUIBASE_HOME}//liquibase status --liquibase.command.url=${URL}"
+        }
+      }
+    }
   }
 }
