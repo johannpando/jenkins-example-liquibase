@@ -6,7 +6,9 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        bat "${LIQUIBASE_HOME}//liquibase status --changelog-file=blank-changelog.sql"
+        dir('C:\\Tools\\liquibase-4.8.0') {
+          bat "${LIQUIBASE_HOME}//liquibase status"
+        }
       }
     }
   }
